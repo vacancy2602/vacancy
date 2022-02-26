@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<div class="row">
+	<h1 align="center">{% trans "report" %}</h1>
+</div>
+<hr>
+<div class="container-fluid" >
+	<ul class="nav nav-tabs nav-justified">
+		<li class="nav-item">
+			<a class="nav-link active" data-toggle="tab" href="#tab1">{% trans "vacancys" %}</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" data-toggle="tab" href="#tab2">{% trans "responds" %}</a>
+		</li>
+	</ul>
+	<div class="tab-content">
+		<div id="tab1" class="container tab-pane active">			
+			<h2>{% trans "vacancys" %}</h2>
+{% if vacancy.count > 0 %}
+<div class="row">
+	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "datev" %}</th>
+				<th>{% trans "organization" %}</th>
+				<th>{% trans "category" %}</th>
+				<th>{% trans "position" %}</th>
+				<th>{% trans "details" %}</th>
+				<th>{% trans "salary" %}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in vacancy %}
+			{% if n.date_close is None %}
+			<tr>			
+			{% else %}
+			<tr style="background-color: pink">
+			{% endif %}
+				<td>
+					<p>{{ n.datev | date:"d.m.Y"}}</p>	
+					{% if n.date_close != Null %}
+						<p>{% trans "date_close" %}: {{ n.date_close | date:"d.m.Y"}}</p>	
+					{% endif %}
+				</td>
+				<td>
+					<p>{{ n.city }}</p>	
+					<p>{{ n.organization }}</p>	
+				</td>
+				<td>
+					<p>{{ n.category }}</p>	
+				</td>
+				<td>
+					<p>{{ n.position }}</p>	
+				</td>
+				<td>
+					<p>{{ n.details }}</p>	
+				</td>
+				<td>
+					<p>{{ n.salary }}</p>	
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+			
+		</div>
+		<div id="tab2" class="container tab-pane">
+			<h2>{% trans "responds" %}</h2>	
+{% if respond.count > 0 %}
+<div class="row">
+	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "dater" %}</th>
+				<th>{% trans "customer" %}</th>
+				<th>{% trans "datev" %}</th>
+				<th>{% trans "organization" %}</th>
+				<th>{% trans "category" %}</th>
+				<th>{% trans "position" %}</th>
+				<th>{% trans "details" %}</th>
+				<th>{% trans "salary" %}</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in respond %}
+			{% if n.vacancy.date_close is None %}
+			<tr>			
+			{% else %}
+			<tr style="background-color: pink">
+			{% endif %}
+				<td>
+					<p>{{ n.dater | date:"d.m.Y H:i"}}</p>	
+				</td>
+				<td>
+					<p>{{ n.customer }}</p>	
+				</td>
+				<td>
+					<p>{{ n.vacancy.datev | date:"d.m.Y H:i"}}</p>						
+					{% if n.vacancy.date_close != Null %}
+						<p>{{ n.vacancy.date_close | date:"d.m.Y H:i"}}</p>		
+					{% endif %}
+				</td>
+				<td>
+					<p>{{ n.vacancy.city }}</p>	
+					<p>{{ n.vacancy.organization }}</p>	
+				</td>
+				<td>
+					<p>{{ n.vacancy.category }}</p>	
+				</td>
+				<td>
+					<p>{{ n.vacancy.position }}</p>	
+				</td>
+				<td>
+					<p>{{ n.vacancy.details }}</p>	
+				</td>
+				<td>
+					<p>{{ n.vacancy.salary }}</p>	
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+			
+		</div>
+	</div>
+</div>		
+
+
+{% endblock content %}

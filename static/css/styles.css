@@ -1,0 +1,103 @@
+body {	
+	color: navy;
+	font-family: Geneva, Arial, Helvetica, sans-serif;	
+}
+
+p, ul,li, label {	
+	color: navy;	
+}
+h1, h2, h3, h4, h5, h6 {	
+	color: navy;	
+}
+input, textarea,address{	
+	color: navy;	
+}
+
+.jumbotron {
+    /*background: #F0F8FF url(../images/background.png) top center no-repeat;*/
+	background-size: cover; 
+	height: 700px;   
+    padding-top: 20px;    
+    margin-top: 20px;
+	text-align: center;
+	text-shadow: #E0FFFF 1px 1px 0, #E0FFFF 2px 2px 0, 
+                 #E0FFFF 3px 3px 0, #E0FFFF 4px 4px 0, 
+                 #E0FFFF 5px 5px 0;
+
+	color: navy;
+}
+
+.jumbotron .h1{
+	color: gold;	
+}
+
+/* fon */
+
+
+#benefits {
+	margin-top: 20px;
+    color: darkslategray;
+	background: lemonchiffon;
+	max-width: 100%;
+	padding: 20px;	
+}
+
+#clients {
+	margin-top: 20px;
+    color: navy;
+	background: ghostwhite;
+	max-width: 100%;
+	padding: 20px;	
+}
+
+#reviews {
+    margin-top: 20px;
+    color: darkred;
+	background: peachpuff;
+	max-width: 100%;
+	padding: 20px;	
+}
+
+/*  Карточки */
+.card {	
+	margin-top: 10px !important;
+	background-color: ghostwhite !important;	
+}
+.card-header {	
+	background-color: fainsboro !important;
+	color: navy !important;	
+}
+.card-body {	
+	background-color: ghostwhite !important;
+	color: navy !important;		
+}
+.card-footer {	
+	background-color: fainsboro !important;
+	color: navy !important;	
+}
+
+.copyrights {	
+	padding: 1px;
+	margin-top: 5px;
+	background-color:  fainsboro;	
+	color:  navy;	
+}
+/*  Таблицы */
+table.dataTable thead {
+	color: navy;
+	background-color: ghostwhite !important;
+}
+/*
+table.dataTable tbody {
+	background-color: ghostwhite;
+}
+table.dataTable td {
+	background-color: ghostwhite;
+	color: navy;	
+}
+table {	
+	background-color: ghostwhite;
+	color: navy;
+}
+*/
+

@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "vacancys" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "vacancys" %}</h2>
+{% if vacancy.count > 0 %}
+<div class="row">
+	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "datev" %}</th>
+				<th>{% trans "organization" %}</th>
+				<th>{% trans "category" %}</th>
+				<th>{% trans "position" %}</th>
+				<th>{% trans "details" %}</th>
+				<th>{% trans "salary" %}</th>
+				<!--<th></th>-->
+				<th><a href="{% url 'vacancy_create'%}">{% trans "Add" %}</a></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in vacancy %}
+			{% if n.date_close is None %}
+			<tr>			
+			{% else %}
+			<tr style="background-color: pink">
+			{% endif %}
+				<td>
+					<p>{{ n.datev | date:"d.m.Y"}}</p>	
+					{% if n.date_close != Null %}
+						<p>{% trans "date_close" %}: {{ n.date_close | date:"d.m.Y"}}</p>	
+					{% endif %}
+				</td>
+				<td>
+					<p>{{ n.city }}</p>	
+					<p>{{ n.organization }}</p>	
+				</td>
+				<td>
+					<p>{{ n.category }}</p>	
+				</td>
+				<td>
+					<p>{{ n.position }}</p>	
+				</td>
+				<td>
+					<p>{{ n.details }}</p>	
+				</td>
+				<td>
+					<p>{{ n.salary }}</p>	
+				</td>
+				<td>
+					<a href="{% url 'vacancy_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'vacancy_read' n.id %}">{% trans "View" %}</a> |
+					<a href="{% url 'vacancy_close' n.id %}">{% trans "Close" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'vacancy_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'vacancy_create'%}">{% trans "Add" %}</a>
+{% endif %}
+{% endblock content %}
+

@@ -1,0 +1,395 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-02-25 14:34+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\quest\forms.py:53 .\quest\forms.py:73 .\templates\city\create.html:6
+#: .\templates\city\edit.html:6 .\templates\city\read.html:6
+msgid "city"
+msgstr "Город"
+
+#: .\quest\forms.py:54 .\quest\forms.py:74
+#: .\templates\organization\create.html:6 .\templates\organization\edit.html:6
+#: .\templates\organization\read.html:6 .\templates\report.html:28
+#: .\templates\report.html:76 .\templates\vacancy\index.html:13
+msgid "organization"
+msgstr "Организация"
+
+#: .\quest\forms.py:55 .\quest\forms.py:75 .\templates\category\create.html:6
+#: .\templates\category\edit.html:6 .\templates\category\read.html:6
+#: .\templates\report.html:29 .\templates\report.html:77
+#: .\templates\vacancy\index.html:14
+msgid "category"
+msgstr "Категория"
+
+#: .\quest\models.py:30 .\templates\customer\list.html:12
+msgid "telegram_id"
+msgstr "Telegram id"
+
+#: .\quest\models.py:31 .\templates\customer\list.html:13
+msgid "phone_number"
+msgstr "Номер телефона"
+
+#: .\quest\models.py:32 .\templates\customer\list.html:14
+msgid "first_name"
+msgstr "Имя (Telegram)"
+
+#: .\quest\models.py:33 .\templates\customer\list.html:15
+msgid "last_name"
+msgstr "Фамилия (Telegram)"
+
+#: .\quest\models.py:34
+msgid "fio"
+msgstr "ФИО"
+
+#: .\quest\models.py:35
+msgid "birthday"
+msgstr "Дата рождения"
+
+#: .\quest\models.py:36
+msgid "education"
+msgstr "Образование"
+
+#: .\quest\models.py:37
+msgid "experience"
+msgstr "Опыт работы"
+
+#: .\quest\models.py:59
+msgid "title_city"
+msgstr "Название города"
+
+#: .\quest\models.py:76
+msgid "title_organization"
+msgstr "Название организации"
+
+#: .\quest\models.py:77
+msgid "organization_details"
+msgstr "Описание"
+
+#: .\quest\models.py:78
+msgid "address"
+msgstr "Адрес"
+
+#: .\quest\models.py:79
+msgid "phone"
+msgstr "Телефон"
+
+#: .\quest\models.py:96
+msgid "title_category"
+msgstr "Название категории"
+
+#: .\quest\models.py:113 .\quest\models.py:120 .\templates\report.html:27
+#: .\templates\report.html:75 .\templates\vacancy\index.html:12
+msgid "datev"
+msgstr "Дата открытия вакансии"
+
+#: .\quest\models.py:117 .\templates\report.html:30 .\templates\report.html:78
+#: .\templates\vacancy\index.html:15
+msgid "position"
+msgstr "Позиция"
+
+#: .\quest\models.py:118
+msgid "vacancy_details"
+msgstr "Описание"
+
+#: .\quest\models.py:119 .\templates\report.html:32 .\templates\report.html:80
+#: .\templates\vacancy\index.html:17
+msgid "salary"
+msgstr "Зарплата"
+
+#: .\quest\models.py:143 .\templates\report.html:73
+msgid "dater"
+msgstr "Дата закрытия вакансии"
+
+#: .\templates\base.html:38
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\base.html:46 .\templates\contact.html:8
+msgid "contacts"
+msgstr "Контакты"
+
+#: .\templates\base.html:56 .\templates\organization\index.html:3
+#: .\templates\organization\index.html:6
+msgid "organizations"
+msgstr "Организации"
+
+#: .\templates\base.html:57 .\templates\city\index.html:3
+#: .\templates\city\index.html:6
+msgid "citys"
+msgstr "Города"
+
+#: .\templates\base.html:58 .\templates\category\index.html:3
+#: .\templates\category\index.html:6
+msgid "categorys"
+msgstr "Категории"
+
+#: .\templates\base.html:60 .\templates\report.html:13
+#: .\templates\report.html:21 .\templates\vacancy\index.html:3
+#: .\templates\vacancy\index.html:6
+msgid "vacancys"
+msgstr "Вакансии"
+
+#: .\templates\base.html:62 .\templates\report.html:7
+msgid "report"
+msgstr "Отчеты"
+
+#: .\templates\base.html:65 .\templates\registration\my_account.html:4
+#: .\templates\registration\my_account.html:10
+msgid "My account"
+msgstr "Моя учетная запись"
+
+#: .\templates\base.html:66
+#: .\templates\registration\password_change_form.html:9
+#: .\templates\registration\password_change_form.html:14
+msgid "Change password"
+msgstr "Изменить пароль"
+
+#: .\templates\base.html:68
+msgid "Log out"
+msgstr "Выйти"
+
+#: .\templates\base.html:73
+msgid "Log In"
+msgstr "Вход"
+
+#: .\templates\base.html:74 .\templates\registration\signup.html:4
+#: .\templates\registration\signup.html:10
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: .\templates\category\create.html:3 .\templates\city\create.html:3
+#: .\templates\organization\create.html:3 .\templates\vacancy\create.html:3
+msgid "Create"
+msgstr "Создать"
+
+#: .\templates\category\create.html:13 .\templates\category\edit.html:13
+#: .\templates\city\create.html:13 .\templates\city\edit.html:13
+#: .\templates\organization\create.html:13
+#: .\templates\organization\edit.html:13 .\templates\vacancy\create.html:13
+#: .\templates\vacancy\edit.html:13
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\category\create.html:14 .\templates\category\edit.html:14
+#: .\templates\category\read.html:18 .\templates\city\create.html:14
+#: .\templates\city\edit.html:14 .\templates\city\read.html:18
+#: .\templates\organization\create.html:14
+#: .\templates\organization\edit.html:14 .\templates\organization\read.html:18
+#: .\templates\vacancy\create.html:14 .\templates\vacancy\edit.html:14
+#: .\templates\vacancy\read.html:25
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\category\edit.html:3 .\templates\category\index.html:24
+#: .\templates\city\edit.html:3 .\templates\city\index.html:24
+#: .\templates\organization\edit.html:3 .\templates\organization\index.html:24
+#: .\templates\vacancy\edit.html:3 .\templates\vacancy\index.html:52
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\category\index.html:12 .\templates\city\index.html:12
+#: .\templates\organization\index.html:12
+msgid "title"
+msgstr "Название"
+
+#: .\templates\category\index.html:14 .\templates\category\index.html:34
+#: .\templates\city\index.html:14 .\templates\city\index.html:34
+#: .\templates\customer\list.html:39 .\templates\organization\index.html:14
+#: .\templates\organization\index.html:34 .\templates\vacancy\index.html:19
+#: .\templates\vacancy\index.html:63
+msgid "Add"
+msgstr "Добавить"
+
+#: .\templates\category\index.html:25 .\templates\city\index.html:25
+#: .\templates\organization\index.html:25 .\templates\vacancy\index.html:53
+msgid "View"
+msgstr "Просмотреть"
+
+#: .\templates\category\index.html:26 .\templates\city\index.html:26
+#: .\templates\organization\index.html:26 .\templates\vacancy\index.html:55
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\category\read.html:3 .\templates\city\read.html:3
+#: .\templates\organization\read.html:3 .\templates\vacancy\read.html:3
+msgid "Read"
+msgstr "Просмотреть"
+
+#: .\templates\customer\list.html:3 .\templates\customer\list.html:6
+msgid "customers"
+msgstr "Пользователи"
+
+#: .\templates\index.html:4 .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "Вакансии"
+
+#: .\templates\registration\logged_out.html:6
+msgid "Logged out!"
+msgstr "Вы вышли"
+
+#: .\templates\registration\logged_out.html:7
+msgid "Login again"
+msgstr "Войти снова"
+
+#: .\templates\registration\login.html:7
+msgid "Incorrect login or password"
+msgstr "Неверный логин или пароль"
+
+#: .\templates\registration\login.html:12
+msgid "You dont have access"
+msgstr "У вас нет доступа"
+
+#: .\templates\registration\login.html:14
+msgid "Login to see this page"
+msgstr "Войдите, чтобы увидеть эту страницу"
+
+#: .\templates\registration\login.html:22
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\templates\registration\login.html:26
+msgid "Login"
+msgstr "Вход"
+
+#: .\templates\registration\login.html:31
+msgid "Lost password?"
+msgstr "Забыли пароль"
+
+#: .\templates\registration\my_account.html:14
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: .\templates\registration\password_change_done.html:5
+msgid "Password changed"
+msgstr "Пароль изменен"
+
+#: .\templates\registration\password_reset_complete.html:6
+msgid "Password reset completed!"
+msgstr "Сброс пароля завершен!"
+
+#: .\templates\registration\password_reset_complete.html:7
+msgid "Log in again?"
+msgstr "Войти снова?"
+
+#: .\templates\registration\password_reset_confirm.html:5
+#: .\templates\registration\password_reset_confirm.html:12
+msgid "Password reset confirmation"
+msgstr "Подтверждение сброса пароля"
+
+#: .\templates\registration\password_reset_confirm.html:17
+#: .\templates\registration\password_reset_form.html:10
+#: .\templates\registration\password_reset_form.html:15
+msgid "Reset password"
+msgstr "Сброс пароля"
+
+#: .\templates\registration\password_reset_confirm.html:24
+msgid "Please enter (and confirm) your new password."
+msgstr "Пожалуйста, введите (и подтвердите) новый пароль."
+
+#: .\templates\registration\password_reset_confirm.html:30
+msgid "New password:"
+msgstr "Новый пароль:"
+
+#: .\templates\registration\password_reset_confirm.html:35
+msgid "Confirm password:"
+msgstr "Подтвердить пароль:"
+
+#: .\templates\registration\password_reset_confirm.html:46
+msgid "Password reset failed"
+msgstr "Не удалось сбросить пароль"
+
+#: .\templates\registration\password_reset_confirm.html:47
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+"Ссылка для сброса пароля недействительна, возможно, потому, что она уже "
+"использовалась. Пожалуйста, запросите сброс нового пароля."
+
+#: .\templates\registration\password_reset_done.html:6
+msgid "Password reset"
+msgstr "Сброс пароля"
+
+#: .\templates\registration\password_reset_done.html:7
+msgid "Check your email"
+msgstr "Проверьте свою электронную почту"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Asked password reset email"
+msgstr "Электронная почта для сброса пароля"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Follow the link below:"
+msgstr "Перейдите по ссылке ниже:"
+
+#: .\templates\registration\register_done.html:10
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: .\templates\registration\register_done.html:11
+msgid "Your account has been successfully created."
+msgstr "Ваша учетная запись успешно создана."
+
+#: .\templates\registration\register_done.html:11
+#: .\templates\registration\signup.html:18
+msgid "Log in"
+msgstr "Авторизоваться"
+
+#: .\templates\registration\signup.html:14
+msgid "Create an account"
+msgstr "Завести аккаунт"
+
+#: .\templates\registration\signup.html:18
+msgid "Already have an account?"
+msgstr "Already have an account?"
+
+#: .\templates\report.html:16 .\templates\report.html:67
+msgid "responds"
+msgstr "Отклики"
+
+#: .\templates\report.html:31 .\templates\report.html:79
+#: .\templates\vacancy\index.html:16
+msgid "details"
+msgstr "Подробности"
+
+#: .\templates\report.html:74
+msgid "customer"
+msgstr "Клиент"
+
+#: .\templates\vacancy\create.html:6 .\templates\vacancy\edit.html:6
+#: .\templates\vacancy\read.html:6
+msgid "vacancy"
+msgstr "Вакансия"
+
+#: .\templates\vacancy\index.html:32
+msgid "date_close"
+msgstr "Дата закрытия"
+
+#: .\templates\vacancy\index.html:54
+msgid "Close"
+msgstr "Закрыть вакансию"

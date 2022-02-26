@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App Name" %}{% endblock title %}
+{% block header %}
+	<script src={% static "js/scroll.js" %}></script>
+{% endblock header %}
+{% block content %}
+<div class="jumbotron">
+	<h1>Бизнес-процесс найма сотрудников</h1>
+	<hr class="my-4">
+	<p>Сайт создан в рамках написания дипломной работы и предназначен для обслуживания Telegram-бота @vacancy26_bot</p>
+</div>
+{% endblock content %}
+
+

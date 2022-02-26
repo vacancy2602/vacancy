@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Read" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "vacancy" %}</h2>
+<div class="row justify-content-center">
+	<div class="card" style="width:100%">
+		<div class="card-header">
+			<p>{% trans "datev" %}: {{ vacancy.datev | date:"d.m.Y"}}</p>		
+		</div>
+		<div class="card-body">
+			<h5>{{ vacancy.city }}</h5>			
+			<h5>{{ vacancy.organization }}</h5>			
+			<h5>{{ vacancy.category }}</h5>	
+			<h4>{% trans "position" %}:</h4>				
+			<h4>{{ vacancy.position }}</h4>			
+			<p>{{ vacancy.details }}</p>			
+			<p>{% trans "salary" %}: {{ vacancy.salary }}</p>			
+		</div>
+		<div class="card-footer">
+			{% if vacancy.date_close != Null %}
+				<p style="background-color: pink">{% trans "date_close" %}: {{ vacancy.date_close | date:"d.m.Y"}}</p>	
+			{% endif %}
+		</div>		
+	</div>
+	<br>
+	<a class="btn btn-outline-info" style="width:100px; margin-top:5px" href="{% url 'vacancy_index' %}">{% trans "Back" %}</a>    	
+</div>
+
+{% endblock content %}

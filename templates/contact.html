@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<div class="row">
+	<div class="col-md-3">
+		<h3 align="center">{% trans "contacts" %}</h3>		
+		<address>
+			<h2 align="center">Казахстан, ул. Сатбаева 2, Алматинский район, Нур-Султан 010000</h2>			
+		</address>				
+		<p><a href="tel:+77172709500">+77172709500</a><p>
+	</div>
+	<div class="col-md-9" style="position:relative;overflow:hidden;">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2502.3160238077876!2d71.4652284157571!3d51.15796297957924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4245813ffefc17b7%3A0xadf5a64b949943db!2z0JXQstGA0LDQt9C40LnRgdC60LjQuSDQvdCw0YbQuNC-0L3QsNC70YzQvdGL0Lkg0YPQvdC40LLQtdGA0YHQuNGC0LXRgiDQuNC80LXQvdC4INCbLtCdLiDQk9GD0LzQuNC70LXQstCw!5e0!3m2!1sru!2skz!4v1645695667407!5m2!1sru!2skz" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+</div>
+{% endblock content %}
