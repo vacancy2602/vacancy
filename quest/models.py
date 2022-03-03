@@ -117,7 +117,7 @@ class Vacancy(models.Model):
     position = models.CharField(_('position'), max_length=196)
     details = models.TextField(_('vacancy_details'))
     salary = models.CharField(_('salary'), max_length=196)
-    date_close = models.DateTimeField(_('datev'), blank=True, null=True)
+    date_close = models.DateTimeField(_('date_close'), blank=True, null=True)
     class Meta:
         # Параметры модели
         # Переопределение имени таблицы
