@@ -3,23 +3,31 @@
 {% block title %}{% endblock title %}
 {% block header %}{% endblock header %} 
 {% block content %}
+<h2>{% trans "Reports" %}</h2>
 <div class="row">
-	<h1 align="center">{% trans "report" %}</h1>
+	<form class="form-horizontal" method="post" style="width: 100%" name="paymentForm">	
+		{% csrf_token %}
+		<div class="controls">
+			<input type="radio" id="reportVacancy" name="reportMode" value="Vacancy" checked>
+			<label for="reportVacancy">{% trans "Vacancy" %}</label>						
+		</div>
+		<div class="controls">
+			<input type="radio" id="reportRespond" name="reportMode" value="Respond" >
+			<label for="reportRespond">{% trans "Respond" %}</label>						
+		</div>
+		<div class="controls">
+			<input type="radio" id="reportCustomer" name="reportMode" value="Customer" >
+			<label for="reportCustomer">{% trans "Customer" %}</label>						
+		</div>		
+		<div class="row justify-content-center">				
+			<button type="submit" name="buy" class="btn btn-outline-success" style="width:100px" >{% trans "Get" %}</button>			
+		</div>		
+	</form>
 </div>
-<hr>
-<div class="container-fluid" >
-	<ul class="nav nav-tabs nav-justified">
-		<li class="nav-item">
-			<a class="nav-link active" data-toggle="tab" href="#tab1">{% trans "vacancys" %}</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" data-toggle="tab" href="#tab2">{% trans "responds" %}</a>
-		</li>
-	</ul>
-	<div class="tab-content">
-		<div id="tab1" class="container tab-pane active">			
-			<h2>{% trans "vacancys" %}</h2>
 {% if vacancy.count > 0 %}
+<div class="row">
+	<h1>{% trans "Vacancy" %}</h1>
+</div>
 <div class="row">
 	<table id="myTable" class="cell-border hover stripe" style="width:100%">
 		<thead>
@@ -67,11 +75,11 @@
 	</table>
 </div>
 {% endif %}
-			
-		</div>
-		<div id="tab2" class="container tab-pane">
-			<h2>{% trans "responds" %}</h2>	
+
 {% if respond.count > 0 %}
+<div class="row">
+	<h1>{% trans "Respond" %}</h1>
+</div>
 <div class="row">
 	<table id="myTable" class="cell-border hover stripe" style="width:100%">
 		<thead>
@@ -84,7 +92,7 @@
 				<th>{% trans "position" %}</th>
 				<th>{% trans "details" %}</th>
 				<th>{% trans "salary" %}</th>
-			</tr>
+			</tr>				
 		</thead>
 		<tbody>
 			{% for n in respond %}
@@ -127,10 +135,58 @@
 	</table>
 </div>
 {% endif %}
-			
-		</div>
-	</div>
-</div>		
 
+{% if customer.count > 0 %}
+<div class="row">
+	<h1>{% trans "Customer" %}</h1>
+</div>
+<div class="row">
+	<table id="myTable" class="cell-border hover stripe" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "telegram_id" %}</th>
+				<th>{% trans "phone_number" %}</th>
+				<th>{% trans "first_name" %}</th>
+				<th>{% trans "last_name" %}</th>
+				<th>{% trans "fio" %}</th>
+				<th>{% trans "birthday" %}</th>
+				<th>{% trans "education" %}</th>
+				<th>{% trans "experienc" %}</th>				
+			</tr>			
+		</thead>
+		<tbody>
+			{% for n in customer %}
+			<tr>			
+				<td>
+					<p>{{ n.telegram_id }}</p>	
+				</td>
+				<td>
+					<p>{{ n.phone_number }}</p>	
+				</td>
+				<td>
+					<p>{{ n.first_name }}</p>						
+				</td>
+				<td>
+					<p>{{ n.last_name }}</p>	
+				</td>
+				<td>
+					<p>{{ n.fio }}</p>	
+				</td>
+				<td>
+					<p>{{ n.birthday | date:"d.m.Y H:i" }}</p>	
+				</td>
+				<td>
+					<p>{{ n.education }}</p>	
+				</td>
+				<td>
+					<p>{{ n.experienc }}</p>	
+				</td>
+			</tr>
+			{% endfor %}
+			
+		</tbody>
+	</table>
+</div>
+{% endif %}
 
 {% endblock content %}

@@ -59,9 +59,21 @@ def contact(request):
 @login_required
 @group_required("Managers")
 def report(request):
-    vacancy = Vacancy.objects.all().order_by('-datev')
-    respond = Respond.objects.all().order_by('-dater')
-    return render(request, "report.html", {"vacancy": vacancy, "respond": respond})
+    if request.method == "POST":
+        print(request.POST.get("reportMode"))
+        if (request.POST.get("reportMode") == "Vacancy"):
+            vacancy = Vacancy.objects.all().order_by('-datev')
+            return render(request, "report.html", {"vacancy": vacancy })            
+        elif (request.POST.get("reportMode") == "Respond"):
+            respond = Respond.objects.all().order_by('-dater')
+            return render(request, "report.html", {"respond": respond })              
+        elif (request.POST.get("reportMode") == "Customer"):
+            customer = Customer.objects.all().order_by('fio')
+            return render(request, "report.html", {"customer": customer })              
+        else:
+            print("Error")
+    else:
+        return render(request, "report.html")
 
 # Список для изменения с кнопками создать, изменить, удалить
 @login_required
