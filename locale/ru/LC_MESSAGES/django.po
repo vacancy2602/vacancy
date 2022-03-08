@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-08 10:08+0600\n"
+"POT-Creation-Date: 2022-03-08 10:23+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -149,7 +149,8 @@ msgstr "Города"
 msgid "categorys"
 msgstr "Категории"
 
-#: .\templates\base.html:59 .\templates\vacancy\index.html:3
+#: .\templates\base.html:59 .\templates\report.html:12
+#: .\templates\report.html:29 .\templates\vacancy\index.html:3
 #: .\templates\vacancy\index.html:6
 msgid "vacancys"
 msgstr "Вакансии"
@@ -241,6 +242,7 @@ msgid "Read"
 msgstr "Просмотреть"
 
 #: .\templates\customer\list.html:3 .\templates\customer\list.html:6
+#: .\templates\report.html:20 .\templates\report.html:141
 msgid "customers"
 msgstr "Пользователи"
 
@@ -382,23 +384,11 @@ msgstr "Already have an account?"
 msgid "Reports"
 msgstr "Отчеты"
 
-#: .\templates\report.html:12 .\templates\report.html:29
-#, fuzzy
-#| msgid "vacancy"
-msgid "Vacancy"
-msgstr "Вакансия"
-
 #: .\templates\report.html:16 .\templates\report.html:81
 #, fuzzy
 #| msgid "responds"
-msgid "Respond"
+msgid "responds"
 msgstr "Отклики"
-
-#: .\templates\report.html:20 .\templates\report.html:141
-#, fuzzy
-#| msgid "customer"
-msgid "Customer"
-msgstr "Клиент"
 
 #: .\templates\report.html:23
 msgid "Get"
@@ -427,3 +417,13 @@ msgstr "Вакансия"
 #: .\templates\vacancy\index.html:54
 msgid "Close"
 msgstr "Закрыть вакансию"
+
+#, fuzzy
+#~| msgid "vacancy"
+#~ msgid "Vacancy"
+#~ msgstr "Вакансия"
+
+#, fuzzy
+#~| msgid "customer"
+#~ msgid "Customer"
+#~ msgstr "Клиент"
