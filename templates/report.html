@@ -107,9 +107,9 @@
 				<td>
 					<p>{{ n.customer }}</p>	
 					<p>{{ n.customer.fio }}</p>	
-					<p>{{ n.customer.birthday | date:"d.m.Y H:i" }}</p>	
+					<p>{{ n.customer.birthday | date:"d.m.Y" }}</p>	
 					<p>{{ n.customer.education }}</p>	
-					<p>{{ n.customer.experienc }}</p>						
+					<p>{{ n.customer.experience }}</p>						
 				</td>
 				<td>
 					<p>{{ n.vacancy.datev | date:"d.m.Y H:i"}}</p>						
@@ -155,7 +155,7 @@
 				<th>{% trans "fio" %}</th>
 				<th>{% trans "birthday" %}</th>
 				<th>{% trans "education" %}</th>
-				<th>{% trans "experienc" %}</th>				
+				<th>{% trans "experience" %}</th>				
 			</tr>			
 		</thead>
 		<tbody>
