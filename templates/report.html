@@ -9,7 +9,7 @@
 		{% csrf_token %}
 		<div class="controls">
 			<input type="radio" id="reportVacancy" name="reportMode" value="Vacancy" checked>
-			<label for="reportVacancy">{% trans "vacancy" %}</label>						
+			<label for="reportVacancy">{% trans "vacancys" %}</label>						
 		</div>
 		<div class="controls">
 			<input type="radio" id="reportRespond" name="reportMode" value="Respond" >
@@ -17,7 +17,7 @@
 		</div>
 		<div class="controls">
 			<input type="radio" id="reportCustomer" name="reportMode" value="Customer" >
-			<label for="reportCustomer">{% trans "customer" %}</label>						
+			<label for="reportCustomer">{% trans "customers" %}</label>						
 		</div>		
 		<div class="row justify-content-center">				
 			<button type="submit" name="buy" class="btn btn-outline-success" style="width:100px" >{% trans "Get" %}</button>			
@@ -26,7 +26,7 @@
 </div>
 {% if vacancy.count > 0 %}
 <div class="row">
-	<h1>{% trans "Vacancy" %}</h1>
+	<h1>{% trans "vacancys" %}</h1>
 </div>
 <div class="row">
 	<table id="myTable" class="cell-border hover stripe" style="width:100%">
@@ -78,7 +78,7 @@
 
 {% if respond.count > 0 %}
 <div class="row">
-	<h1>{% trans "Respond" %}</h1>
+	<h1>{% trans "responds" %}</h1>
 </div>
 <div class="row">
 	<table id="myTable" class="cell-border hover stripe" style="width:100%">
@@ -138,7 +138,7 @@
 
 {% if customer.count > 0 %}
 <div class="row">
-	<h1>{% trans "Customer" %}</h1>
+	<h1>{% trans "customers" %}</h1>
 </div>
 <div class="row">
 	<table id="myTable" class="cell-border hover stripe" style="width:100%">
