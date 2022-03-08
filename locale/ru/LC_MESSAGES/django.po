@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-25 14:34+0600\n"
+"POT-Creation-Date: 2022-03-08 10:08+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,43 +26,47 @@ msgstr "Город"
 
 #: .\quest\forms.py:54 .\quest\forms.py:74
 #: .\templates\organization\create.html:6 .\templates\organization\edit.html:6
-#: .\templates\organization\read.html:6 .\templates\report.html:28
-#: .\templates\report.html:76 .\templates\vacancy\index.html:13
+#: .\templates\organization\read.html:6 .\templates\report.html:36
+#: .\templates\report.html:90 .\templates\vacancy\index.html:13
 msgid "organization"
 msgstr "Организация"
 
 #: .\quest\forms.py:55 .\quest\forms.py:75 .\templates\category\create.html:6
 #: .\templates\category\edit.html:6 .\templates\category\read.html:6
-#: .\templates\report.html:29 .\templates\report.html:77
+#: .\templates\report.html:37 .\templates\report.html:91
 #: .\templates\vacancy\index.html:14
 msgid "category"
 msgstr "Категория"
 
 #: .\quest\models.py:30 .\templates\customer\list.html:12
+#: .\templates\report.html:147
 msgid "telegram_id"
 msgstr "Telegram id"
 
 #: .\quest\models.py:31 .\templates\customer\list.html:13
+#: .\templates\report.html:148
 msgid "phone_number"
 msgstr "Номер телефона"
 
 #: .\quest\models.py:32 .\templates\customer\list.html:14
+#: .\templates\report.html:149
 msgid "first_name"
 msgstr "Имя (Telegram)"
 
 #: .\quest\models.py:33 .\templates\customer\list.html:15
+#: .\templates\report.html:150
 msgid "last_name"
 msgstr "Фамилия (Telegram)"
 
-#: .\quest\models.py:34
+#: .\quest\models.py:34 .\templates\report.html:151
 msgid "fio"
 msgstr "ФИО"
 
-#: .\quest\models.py:35
+#: .\quest\models.py:35 .\templates\report.html:152
 msgid "birthday"
 msgstr "Дата рождения"
 
-#: .\quest\models.py:36
+#: .\quest\models.py:36 .\templates\report.html:153
 msgid "education"
 msgstr "Образование"
 
@@ -94,13 +98,13 @@ msgstr "Телефон"
 msgid "title_category"
 msgstr "Название категории"
 
-#: .\quest\models.py:113 .\quest\models.py:120 .\templates\report.html:27
-#: .\templates\report.html:75 .\templates\vacancy\index.html:12
+#: .\quest\models.py:113 .\templates\report.html:35 .\templates\report.html:89
+#: .\templates\vacancy\index.html:12 .\templates\vacancy\read.html:10
 msgid "datev"
 msgstr "Дата открытия вакансии"
 
-#: .\quest\models.py:117 .\templates\report.html:30 .\templates\report.html:78
-#: .\templates\vacancy\index.html:15
+#: .\quest\models.py:117 .\templates\report.html:38 .\templates\report.html:92
+#: .\templates\vacancy\index.html:15 .\templates\vacancy\read.html:16
 msgid "position"
 msgstr "Позиция"
 
@@ -108,68 +112,72 @@ msgstr "Позиция"
 msgid "vacancy_details"
 msgstr "Описание"
 
-#: .\quest\models.py:119 .\templates\report.html:32 .\templates\report.html:80
-#: .\templates\vacancy\index.html:17
+#: .\quest\models.py:119 .\templates\report.html:40 .\templates\report.html:94
+#: .\templates\vacancy\index.html:17 .\templates\vacancy\read.html:19
 msgid "salary"
 msgstr "Зарплата"
 
-#: .\quest\models.py:143 .\templates\report.html:73
+#: .\quest\models.py:120 .\templates\report.html:53
+#: .\templates\vacancy\index.html:32 .\templates\vacancy\read.html:23
+msgid "date_close"
+msgstr "Дата закрытия"
+
+#: .\quest\models.py:143 .\templates\report.html:87
 msgid "dater"
 msgstr "Дата закрытия вакансии"
 
-#: .\templates\base.html:38
+#: .\templates\base.html:37
 msgid "Home"
 msgstr "Главная"
 
-#: .\templates\base.html:46 .\templates\contact.html:8
+#: .\templates\base.html:45 .\templates\contact.html:8
 msgid "contacts"
 msgstr "Контакты"
 
-#: .\templates\base.html:56 .\templates\organization\index.html:3
+#: .\templates\base.html:55 .\templates\organization\index.html:3
 #: .\templates\organization\index.html:6
 msgid "organizations"
 msgstr "Организации"
 
-#: .\templates\base.html:57 .\templates\city\index.html:3
+#: .\templates\base.html:56 .\templates\city\index.html:3
 #: .\templates\city\index.html:6
 msgid "citys"
 msgstr "Города"
 
-#: .\templates\base.html:58 .\templates\category\index.html:3
+#: .\templates\base.html:57 .\templates\category\index.html:3
 #: .\templates\category\index.html:6
 msgid "categorys"
 msgstr "Категории"
 
-#: .\templates\base.html:60 .\templates\report.html:13
-#: .\templates\report.html:21 .\templates\vacancy\index.html:3
+#: .\templates\base.html:59 .\templates\vacancy\index.html:3
 #: .\templates\vacancy\index.html:6
 msgid "vacancys"
 msgstr "Вакансии"
 
-#: .\templates\base.html:62 .\templates\report.html:7
+#: .\templates\base.html:61
 msgid "report"
 msgstr "Отчеты"
 
-#: .\templates\base.html:65 .\templates\registration\my_account.html:4
+#: .\templates\base.html:64 .\templates\registration\my_account.html:4
 #: .\templates\registration\my_account.html:10
 msgid "My account"
 msgstr "Моя учетная запись"
 
-#: .\templates\base.html:66
+#: .\templates\base.html:65
 #: .\templates\registration\password_change_form.html:9
 #: .\templates\registration\password_change_form.html:14
 msgid "Change password"
 msgstr "Изменить пароль"
 
-#: .\templates\base.html:68
+#: .\templates\base.html:67
 msgid "Log out"
 msgstr "Выйти"
 
-#: .\templates\base.html:73
+#: .\templates\base.html:72
 msgid "Log In"
 msgstr "Вход"
 
-#: .\templates\base.html:74 .\templates\registration\signup.html:4
+#: .\templates\base.html:73 .\templates\registration\signup.html:4
 #: .\templates\registration\signup.html:10
 msgid "Sign up"
 msgstr "Регистрация"
@@ -193,7 +201,7 @@ msgstr "Сохранить"
 #: .\templates\organization\create.html:14
 #: .\templates\organization\edit.html:14 .\templates\organization\read.html:18
 #: .\templates\vacancy\create.html:14 .\templates\vacancy\edit.html:14
-#: .\templates\vacancy\read.html:25
+#: .\templates\vacancy\read.html:28
 msgid "Back"
 msgstr "Назад"
 
@@ -368,27 +376,53 @@ msgstr "Завести аккаунт"
 msgid "Already have an account?"
 msgstr "Already have an account?"
 
-#: .\templates\report.html:16 .\templates\report.html:67
-msgid "responds"
+#: .\templates\report.html:6
+#, fuzzy
+#| msgid "report"
+msgid "Reports"
+msgstr "Отчеты"
+
+#: .\templates\report.html:12 .\templates\report.html:29
+#, fuzzy
+#| msgid "vacancy"
+msgid "Vacancy"
+msgstr "Вакансия"
+
+#: .\templates\report.html:16 .\templates\report.html:81
+#, fuzzy
+#| msgid "responds"
+msgid "Respond"
 msgstr "Отклики"
 
-#: .\templates\report.html:31 .\templates\report.html:79
+#: .\templates\report.html:20 .\templates\report.html:141
+#, fuzzy
+#| msgid "customer"
+msgid "Customer"
+msgstr "Клиент"
+
+#: .\templates\report.html:23
+msgid "Get"
+msgstr "Получить"
+
+#: .\templates\report.html:39 .\templates\report.html:93
 #: .\templates\vacancy\index.html:16
 msgid "details"
 msgstr "Подробности"
 
-#: .\templates\report.html:74
+#: .\templates\report.html:88
 msgid "customer"
 msgstr "Клиент"
+
+#: .\templates\report.html:154
+#, fuzzy
+#| msgid "experience"
+msgid "experienc"
+msgstr "Опыт работы"
 
 #: .\templates\vacancy\create.html:6 .\templates\vacancy\edit.html:6
 #: .\templates\vacancy\read.html:6
 msgid "vacancy"
 msgstr "Вакансия"
-
-#: .\templates\vacancy\index.html:32
-msgid "date_close"
-msgstr "Дата закрытия"
 
 #: .\templates\vacancy\index.html:54
 msgid "Close"
