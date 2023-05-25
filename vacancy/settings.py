@@ -25,10 +25,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-l&f1oaz!2-6(w-x*k*+_bo4zjo_7a1648ku*bs8%k4ifwuii66'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
 DEBUG = False
+#DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'vacancy26.herokuapp.com',]
+ALLOWED_HOSTS = ['127.0.0.1', 'vacancy77.onrender.com',]
 
 # Application definition
 
@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'vacancy.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    #'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3',
-    #    'NAME': BASE_DIR / 'db.sqlite3',
-    #}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 
     #'default': {
     #    'ENGINE': 'django.db.backends.postgresql_psycopg2',
@@ -97,15 +97,6 @@ DATABASES = {
     #    'HOST' : '127.0.0.1',
     #    'PORT' : '5432',
     #}
-
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd333vksqb1unsv',
-        'USER' : 'dzlzpndnpafmkm',
-        'PASSWORD' : '083eec1d9a8962b5dc40e071d8e8c25655351820dbc979d516d0a0b8194a1bdc',
-        'HOST' : 'ec2-3-215-83-124.compute-1.amazonaws.com',
-        'PORT' : '5432',
-    }
 }
 
 # Password validation
@@ -140,8 +131,8 @@ USE_TZ = True
 LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
 
 LANGUAGES = (
+    ('kk', 'Kazakh'),
     ('ru', 'Russian'),
-    ('en', 'English'),
 )
 
 #STATICFILES_DIRS = [

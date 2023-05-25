@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-08 10:23+0600\n"
+"POT-Creation-Date: 2023-05-25 11:09+0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,38 +39,38 @@ msgid "category"
 msgstr "Категория"
 
 #: .\quest\models.py:30 .\templates\customer\list.html:12
-#: .\templates\report.html:147
+#: .\templates\report.html:151
 msgid "telegram_id"
 msgstr "Telegram id"
 
 #: .\quest\models.py:31 .\templates\customer\list.html:13
-#: .\templates\report.html:148
+#: .\templates\report.html:152
 msgid "phone_number"
 msgstr "Номер телефона"
 
 #: .\quest\models.py:32 .\templates\customer\list.html:14
-#: .\templates\report.html:149
+#: .\templates\report.html:153
 msgid "first_name"
 msgstr "Имя (Telegram)"
 
 #: .\quest\models.py:33 .\templates\customer\list.html:15
-#: .\templates\report.html:150
+#: .\templates\report.html:154
 msgid "last_name"
 msgstr "Фамилия (Telegram)"
 
-#: .\quest\models.py:34 .\templates\report.html:151
+#: .\quest\models.py:34 .\templates\report.html:155
 msgid "fio"
 msgstr "ФИО"
 
-#: .\quest\models.py:35 .\templates\report.html:152
+#: .\quest\models.py:35 .\templates\report.html:156
 msgid "birthday"
 msgstr "Дата рождения"
 
-#: .\quest\models.py:36 .\templates\report.html:153
+#: .\quest\models.py:36 .\templates\report.html:157
 msgid "education"
 msgstr "Образование"
 
-#: .\quest\models.py:37
+#: .\quest\models.py:37 .\templates\report.html:158
 msgid "experience"
 msgstr "Опыт работы"
 
@@ -126,59 +126,59 @@ msgstr "Дата закрытия"
 msgid "dater"
 msgstr "Дата закрытия вакансии"
 
-#: .\templates\base.html:37
+#: .\templates\base.html:36
 msgid "Home"
 msgstr "Главная"
 
-#: .\templates\base.html:45 .\templates\contact.html:8
+#: .\templates\base.html:44 .\templates\contact.html:8
 msgid "contacts"
 msgstr "Контакты"
 
-#: .\templates\base.html:55 .\templates\organization\index.html:3
+#: .\templates\base.html:54 .\templates\organization\index.html:3
 #: .\templates\organization\index.html:6
 msgid "organizations"
 msgstr "Организации"
 
-#: .\templates\base.html:56 .\templates\city\index.html:3
+#: .\templates\base.html:55 .\templates\city\index.html:3
 #: .\templates\city\index.html:6
 msgid "citys"
 msgstr "Города"
 
-#: .\templates\base.html:57 .\templates\category\index.html:3
+#: .\templates\base.html:56 .\templates\category\index.html:3
 #: .\templates\category\index.html:6
 msgid "categorys"
 msgstr "Категории"
 
-#: .\templates\base.html:59 .\templates\report.html:12
+#: .\templates\base.html:58 .\templates\report.html:12
 #: .\templates\report.html:29 .\templates\vacancy\index.html:3
 #: .\templates\vacancy\index.html:6
 msgid "vacancys"
 msgstr "Вакансии"
 
-#: .\templates\base.html:61
+#: .\templates\base.html:60
 msgid "report"
 msgstr "Отчеты"
 
-#: .\templates\base.html:64 .\templates\registration\my_account.html:4
+#: .\templates\base.html:63 .\templates\registration\my_account.html:4
 #: .\templates\registration\my_account.html:10
 msgid "My account"
 msgstr "Моя учетная запись"
 
-#: .\templates\base.html:65
+#: .\templates\base.html:64
 #: .\templates\registration\password_change_form.html:9
 #: .\templates\registration\password_change_form.html:14
 msgid "Change password"
 msgstr "Изменить пароль"
 
-#: .\templates\base.html:67
+#: .\templates\base.html:66
 msgid "Log out"
 msgstr "Выйти"
 
-#: .\templates\base.html:72
+#: .\templates\base.html:71
 msgid "Log In"
 msgstr "Вход"
 
-#: .\templates\base.html:73 .\templates\registration\signup.html:4
+#: .\templates\base.html:72 .\templates\registration\signup.html:4
 #: .\templates\registration\signup.html:10
 msgid "Sign up"
 msgstr "Регистрация"
@@ -242,7 +242,7 @@ msgid "Read"
 msgstr "Просмотреть"
 
 #: .\templates\customer\list.html:3 .\templates\customer\list.html:6
-#: .\templates\report.html:20 .\templates\report.html:141
+#: .\templates\report.html:20 .\templates\report.html:145
 msgid "customers"
 msgstr "Пользователи"
 
@@ -288,7 +288,7 @@ msgstr "Вход"
 
 #: .\templates\registration\login.html:31
 msgid "Lost password?"
-msgstr "Забыли пароль"
+msgstr "Забыли пароль?"
 
 #: .\templates\registration\my_account.html:14
 msgid "Save changes"
@@ -368,7 +368,7 @@ msgstr "Ваша учетная запись успешно создана."
 #: .\templates\registration\register_done.html:11
 #: .\templates\registration\signup.html:18
 msgid "Log in"
-msgstr "Авторизоваться"
+msgstr "Вход"
 
 #: .\templates\registration\signup.html:14
 msgid "Create an account"
@@ -376,17 +376,13 @@ msgstr "Завести аккаунт"
 
 #: .\templates\registration\signup.html:18
 msgid "Already have an account?"
-msgstr "Already have an account?"
+msgstr "У вас уже есть учетная запись?"
 
 #: .\templates\report.html:6
-#, fuzzy
-#| msgid "report"
 msgid "Reports"
 msgstr "Отчеты"
 
-#: .\templates\report.html:16 .\templates\report.html:81
-#, fuzzy
-#| msgid "responds"
+#: .\templates\report.html:16
 msgid "responds"
 msgstr "Отклики"
 
@@ -403,12 +399,6 @@ msgstr "Подробности"
 msgid "customer"
 msgstr "Клиент"
 
-#: .\templates\report.html:154
-#, fuzzy
-#| msgid "experience"
-msgid "experienc"
-msgstr "Опыт работы"
-
 #: .\templates\vacancy\create.html:6 .\templates\vacancy\edit.html:6
 #: .\templates\vacancy\read.html:6
 msgid "vacancy"
@@ -417,6 +407,11 @@ msgstr "Вакансия"
 #: .\templates\vacancy\index.html:54
 msgid "Close"
 msgstr "Закрыть вакансию"
+
+#, fuzzy
+#~| msgid "experience"
+#~ msgid "experienc"
+#~ msgstr "Опыт работы"
 
 #, fuzzy
 #~| msgid "vacancy"

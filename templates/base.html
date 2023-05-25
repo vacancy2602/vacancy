@@ -16,14 +16,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	
-	
-	<!-- Bootstrap CSS, JavaScript. Точнее - им требуются jQuery, Popper.js 
-	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-	<script defer src="{% static 'js/jquery.min.js' %}"></script>
-	<script defer src="{% static 'js/bootstrap.min.js' %}"></script>
-	<script defer src="{% static 'js/popper.min.js' %}"></script>
-	-->	
-	
+	<!-- Bootstrap CSS, JavaScript. Точнее - им требуются jQuery, Popper.js -->
+	<!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"> -->
+	<!-- <script defer src="{% static 'js/jquery.min.js' %}"></script> -->
+	<!-- <script defer src="{% static 'js/bootstrap.min.js' %}"></script> -->
+	<!-- <script defer src="{% static 'js/popper.min.js' %}"></script> -->
+		
 	<!-- select-box-with-search-option-using-jquery -->
 	<link rel="stylesheet" href="{% static 'css/choosen.css' %}" />
 	<!--
@@ -73,7 +71,6 @@
 							<!--<a href="{% url 'signup' %}" class="btn btn-primary ml-2">{% trans "Sign up" %}</a>-->
 						</form>
 					{% endif %}
-					<!--
 					<form action="{% url 'set_language' %}" method="post">
 						{% csrf_token %}
 						<input name="next" type="hidden" value="{{ redirect_to }}" />
@@ -85,8 +82,7 @@
 							{{ language.code }}
 						</button>
 						{% endfor %}
-					</form>
-					-->
+					</form>					
 				</ul>
 			</div>
 		</div>
@@ -103,10 +99,10 @@
 </footer>
 <!-- Пагинация таблиц (Постраничный вывод) https://datatables.net/ -->
 <script src="{% static 'js/datatables.js' %}"></script>
-<!--
-<link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}">
-<script src= "{% static 'js/jquery.dataTables.min.js' %}"></script>
--->
+
+<!-- <link rel="stylesheet" href="{% static 'css/jquery.dataTables.min.css' %}"> -->
+<!-- <script src= "{% static 'js/jquery.dataTables.min.js' %}"></script> -->
+
 <link rel="stylesheet" href="https://cdn.datatables.net/1.11.2/css/jquery.dataTables.min.css">
 <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
 

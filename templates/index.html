@@ -7,9 +7,15 @@
 {% endblock header %}
 {% block content %}
 <div class="jumbotron">
-	<h1>Бизнес-процесс найма сотрудников</h1>
-	<hr class="my-4">
-	<p>Сайт создан в рамках написания дипломной работы и предназначен для обслуживания Telegram-бота @vacancy26_bot</p>
+	{% if LANGUAGE_CODE == 'kk' %}
+		<h1>Қызметкерлерді жалдаудың Бизнес-процесі</h1>
+		<hr class="my-4">
+		<p>Сайт @vacancy26_bot Telegram ботына қызмет көрсету үшін жасалған</p>
+	{% else %}
+		<h1>Бизнес-процесс найма сотрудников</h1>
+		<hr class="my-4">
+		<p>Сайт создан для обслуживания Telegram-бота @vacancy26_bot</p>
+	{% endif %}				
 </div>
 {% endblock content %}
 

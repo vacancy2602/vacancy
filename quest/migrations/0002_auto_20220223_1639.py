@@ -5,6 +5,9 @@ from django.db import migrations
 from django.contrib.auth.models import User
 from django.contrib.auth.models import Group
 
+from datetime import datetime, timedelta
+import time
+
 def beginning(apps, schema_editor):
     
     # Суперпользователь id-1
@@ -19,10 +22,11 @@ def beginning(apps, schema_editor):
     managers = Group.objects.get(name='Managers')
     print("Группа менеджеров создана")
     
-    # Пользователь с ролью менеджера id8
+    # Пользователь с ролью менеджера id2
     user = User.objects.create_user(username='manager', password='Ss0066+-')
     managers.user_set.add(user)
     print("Менеджер добавлен в группу менеджеров")
+
 
     ##### Города #####
     
@@ -174,7 +178,7 @@ def beginning(apps, schema_editor):
     Vacancy = apps.get_model("quest", "Vacancy")
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=30)
     vacancy.city_id = 1
     vacancy.organization_id = 5
     vacancy.category_id = 1
@@ -184,7 +188,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=29)
     vacancy.city_id = 1
     vacancy.organization_id = 5
     vacancy.category_id = 1
@@ -194,7 +198,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=28)
     vacancy.city_id = 2
     vacancy.organization_id = 4
     vacancy.category_id = 10
@@ -204,7 +208,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=27)
     vacancy.city_id = 2
     vacancy.organization_id = 4
     vacancy.category_id = 10
@@ -214,7 +218,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=26)
     vacancy.city_id = 1
     vacancy.organization_id = 7
     vacancy.category_id = 1
@@ -224,7 +228,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=25)
     vacancy.city_id = 4
     vacancy.organization_id = 1
     vacancy.category_id = 3
@@ -234,7 +238,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=24)
     vacancy.city_id = 5
     vacancy.organization_id = 2
     vacancy.category_id = 5
@@ -244,7 +248,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=23)
     vacancy.city_id = 6
     vacancy.organization_id = 3
     vacancy.category_id = 10
@@ -254,7 +258,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=22)
     vacancy.city_id = 7
     vacancy.organization_id = 4
     vacancy.category_id = 10
@@ -264,7 +268,7 @@ def beginning(apps, schema_editor):
     vacancy.save()
 
     vacancy = Vacancy()
-    vacancy.datev = '2022-01-27 12:00:00'
+    vacancy.datev = datetime.now() - timedelta(days=21)
     vacancy.city_id = 1
     vacancy.organization_id = 6
     vacancy.category_id = 4
@@ -274,6 +278,182 @@ def beginning(apps, schema_editor):
     vacancy.save()
     
     print("Вакансии добавлены")
+
+    ##### Клиенты и отклики #####
+    Customer = apps.get_model("quest", "Customer")
+    Respond = apps.get_model("quest", "Respond")
+
+    customer = Customer()
+    customer.telegram_id = 611990001
+    customer.phone_number = '+77011234567'
+    customer.first_name = 'Maira'
+    customer.last_name = ''
+    customer.fio = 'Майра Ералиева'
+    customer.birthday = '2000-03-03 12:00:00'
+    customer.education = 'ИнЕУ 2022 г.'
+    customer.experience = 'Бухгалтер ТОО Азия'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=20)
+    respond.vacancy_id = 1
+    respond.customer = customer
+    respond.save()
+
+    customer = Customer()
+    customer.telegram_id = 611990002
+    customer.phone_number = '+77012345678'
+    customer.first_name = 'Erden'
+    customer.last_name = ''
+    customer.fio = 'Какиев Ерден Айдарович'
+    customer.birthday = '1999-04-04 12:00:00'
+    customer.education = 'КарГУ 2021 г.'
+    customer.experience = 'Менеджер ТОО Восток'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=19)
+    respond.vacancy_id = 2
+    respond.customer = customer
+    respond.save()
+    
+    customer = Customer()
+    customer.telegram_id = 611990003
+    customer.phone_number = '+77013456789'
+    customer.first_name = 'Dastan'
+    customer.last_name = ''
+    customer.fio = 'Жаксыгулов Дастан Адилбекович'
+    customer.birthday = '1997-06-06 12:00:00'
+    customer.education = 'КарГУ 2020 г.'
+    customer.experience = 'Менеджер ТОО Металлсервис'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=18)
+    respond.vacancy_id = 3
+    respond.customer = customer
+    respond.save()
+    
+    customer = Customer()
+    customer.telegram_id = 611990004
+    customer.phone_number = '+77014567890'
+    customer.first_name = 'Temirlan'
+    customer.last_name = ''
+    customer.fio = 'Жанабергенов Темирлан Калкаманович'
+    customer.birthday = '1996-07-07 12:00:00'
+    customer.education = 'КазГУ 2019 г.'
+    customer.experience = 'Менеджер ТОО Тулпар'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=17)
+    respond.vacancy_id = 4
+    respond.customer = customer
+    respond.save()
+    
+    customer = Customer()
+    customer.telegram_id = 611990005
+    customer.phone_number = '+77015678901'
+    customer.first_name = 'Darina'
+    customer.last_name = ''
+    customer.fio = 'Копеева Дарина Досбековна'
+    customer.birthday = '1995-08-08 12:00:00'
+    customer.education = 'КазГПИ 2018 г.'
+    customer.experience = 'Менеджер ТОО Зарина'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=16)
+    respond.vacancy_id = 5
+    respond.customer = customer
+    respond.save()
+    
+    customer = Customer()
+    customer.telegram_id = 611990006
+    customer.phone_number = '+77016789012'
+    customer.first_name = 'Aida'
+    customer.last_name = ''
+    customer.fio = 'Капанова Аида Талгатовна'
+    customer.birthday = '1994-08-08 12:00:00'
+    customer.education = 'Политех 2017 г.'
+    customer.experience = 'Менеджер ТОО Водоканал'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=15)
+    respond.vacancy_id = 6
+    respond.customer = customer
+    respond.save()
+    
+    customer = Customer()
+    customer.telegram_id = 611990007
+    customer.phone_number = '+77017890123'
+    customer.first_name = 'Samat'
+    customer.last_name = ''
+    customer.fio = 'Берикбол Самат Берикболұлы'
+    customer.birthday = '1992-10-10 12:00:00'
+    customer.education = 'КарГУ 2015 г.'
+    customer.experience = 'Менеджер ТОО Азия'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=14)
+    respond.vacancy_id = 7
+    respond.customer = customer
+    respond.save()
+       
+    customer = Customer()
+    customer.telegram_id = 611990008
+    customer.phone_number = '+77018901234'
+    customer.first_name = 'Aigerim'
+    customer.last_name = ''
+    customer.fio = 'Балтабаева Айгерим Каиржановна'
+    customer.birthday = '1991-11-11 12:00:00'
+    customer.education = 'ЕНУ 2014 г.'
+    customer.experience = 'Менеджер ТОО Стальмонтаж'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=13)
+    respond.vacancy_id = 8
+    respond.customer = customer
+    respond.save()
+       
+    customer = Customer()
+    customer.telegram_id = 611990009
+    customer.phone_number = '+77019012345'
+    customer.first_name = 'Tilek'
+    customer.last_name = ''
+    customer.fio = 'Аманкосов Тілек Ғалиахметұлы'
+    customer.birthday = '1990-12-12 12:00:00'
+    customer.education = 'ЕНУ 2013 г.'
+    customer.experience = 'Менеджер ТОО Дормаш'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=12)
+    respond.vacancy_id = 9
+    respond.customer = customer
+    respond.save()
+       
+    customer = Customer()
+    customer.telegram_id = 611990010
+    customer.phone_number = '+77010123456'
+    customer.first_name = 'Tomiris'
+    customer.last_name = ''
+    customer.fio = 'Мухамедьянова Томирис Баглановна'
+    customer.birthday = '1989-01-01 12:00:00'
+    customer.education = 'КазГУ 2012 г.'
+    customer.experience = 'Менеджер ТОО Алтай'   
+    customer.save()
+
+    respond = Respond()
+    respond.dater = datetime.now() - timedelta(days=11)
+    respond.vacancy_id = 10
+    respond.customer = customer
+    respond.save()
+
+    print("Клиенты и Отклики добавлены")
 
 class Migration(migrations.Migration):
 
